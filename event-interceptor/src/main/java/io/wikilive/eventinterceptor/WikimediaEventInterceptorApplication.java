@@ -9,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.codec.ServerSentEvent;
 import reactor.core.publisher.Flux;
 
@@ -20,6 +21,7 @@ public class WikimediaEventInterceptorApplication {
     SpringApplication.run(WikimediaEventInterceptorApplication.class, args);
   }
 
+  @Profile("!test")
   @Bean
   CommandLineRunner start(
       ServerSentEventsConsumerService service,
