@@ -4,11 +4,14 @@ server:
 spring:
   application:
     name: event-interceptor
-
-spring.kafka.producer:
-  bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVER:localhost:9092}
-  key-serializer: org.apache.kafka.common.serialization.StringSerializer
-  value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  kafka:
+    producer:
+      bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVER:localhost:9092}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    admin:
+      properties:
+        bootstrap.servers: ${KAFKA_BOOTSTRAP_SERVER:localhost:9092}
 
 wikimedia:
   sse:
