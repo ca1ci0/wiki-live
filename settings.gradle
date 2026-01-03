@@ -1,1 +1,3 @@
 rootProject.name = 'wiki-live'
+
+include 'event-interceptor'
