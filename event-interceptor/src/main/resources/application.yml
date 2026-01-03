@@ -4,3 +4,14 @@ server:
 spring:
   application:
     name: event-interceptor
+
+spring.kafka.producer:
+  bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVER:localhost:9092}
+  key-serializer: org.apache.kafka.common.serialization.StringSerializer
+  value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+wikimedia:
+  sse:
+    host: "https://stream.wikimedia.org"
+    endpoint: "/v2/stream/recentchange"
+  kafka.topic: "wikimedia.recentchange"
