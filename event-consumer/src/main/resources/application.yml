@@ -7,13 +7,16 @@ spring:
   kafka:
     consumer:
       bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVER:localhost:9092}
-      group-id: opensearch-group
+      group-id: elasticsearch-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       auto-offset-reset: earliest
       max-poll-records: 50
     listener:
       type: batch
+  elasticsearch:
+    uris: ${ELASTICSEARCH_URL:http://localhost:9200}
 
 wikimedia:
   kafka.topic: "wikimedia.recentchange"
+  index: "wikimedia"
