@@ -41,7 +41,7 @@ docker-compose up -d
 Services:
 - Kafka: localhost:9092
 - Kafka UI: http://localhost:8080
-- Elasticsearch: http://localhost:9200
+- Elasticsearch: localhost:9200
 - Kibana: http://localhost:5601
 - Grafana: http://localhost:3000 (admin/admin)
 
