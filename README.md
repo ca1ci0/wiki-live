@@ -43,6 +43,7 @@ Services:
 - Kafka UI: http://localhost:8080
 - Elasticsearch: http://localhost:9200
 - Kibana: http://localhost:5601
+- Grafana: http://localhost:3000 (admin/admin)
 
 ## Running
 
