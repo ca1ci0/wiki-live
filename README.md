@@ -1,4 +1,4 @@
-# Wiki Live
+# WikiLive
 
 Real-time Wikimedia event streaming and analytics platform.
 
